@@ -1,0 +1,544 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("fonts/ptsans-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("fonts/ptsans-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Шапка */
+.main-nav-link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.user-nav-count {
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Кнопки */
+.button {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Главная страница */
+.advantages-title,
+.recommendations-title,
+.offer-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.advantages-subtitle,
+.recommendations-subtitle {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.advantages-text,
+.advantages-description,
+.recommendations-description,
+.offer-text {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+/* Подписка (на тёмном фоне — белый текст) */
+.subscribe-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.subscribe-text {
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+/* Каталог */
+.catalog-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.breadcrumbs-link,
+.breadcrumbs-current {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.filter-group-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.filter-label,
+.filter-price-text {
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.catalog-count {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.hotel-card-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.hotel-card-type,
+.hotel-card-price {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.hotel-card-rating {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+}
+
+/* Подвал */
+.footer-phone {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #333333;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-width: 1200px;          /* страница не уже макета */
+}
+
+.page-main {
+  flex-grow: 1;               /* main растягивается и прижимает футер к низу */
+}
+
+/* Блоки на всю ширину сетки */
+.hero,
+.advantages,
+.recommendations,
+.offer,
+.subscribe,
+.catalog-hotels {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/* Блоки с боковыми отступами: 1060 + 70 + 70 = 1200 */
+.page-header,
+.page-footer,
+.catalog-header,
+.catalog-filter,
+.catalog-sorting,
+.catalog-pagination {
+  width: 1060px;
+  margin: 0 auto;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+/* Шапка: логотип слева, меню растянулось, пользовательское меню справа */
+.page-header {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+
+.main-nav-list { gap: 32px; }
+.user-nav-list { gap: 20px; align-items: center; }
+
+/* Герой — по центру */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+}
+
+/* Преимущества: большие карточки на всю ширину, маленькие по 400 (1200 / 3) */
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-item { width: 400px; }
+.advantages-item-full { width: 1200px; }
+
+/* Рекомендации: три карточки с зазорами, flex-grow дораспределяет остаток */
+.recommendations-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.recommendations-item {
+  width: 380px;
+  flex-grow: 1;
+}
+
+/* «Заинтересовались?» и подписка — по центру */
+.offer,
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscribe-form { display: flex; }
+
+/* Каталог: заголовок слева, крошки справа */
+.catalog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Фильтр: группы разведены по краям */
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Сортировка: счётчик слева, селект и вид справа */
+.catalog-sorting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.view-list { display: flex; gap: 20px; }
+
+/* Гостиницы: сетка 3 в ряд, как рекомендации */
+.hotels-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.hotel-card {
+  width: 380px;
+  flex-grow: 1;
+}
+
+/* Пагинация и подвал */
+.pagination-list { display: flex; gap: 10px; }
+
+.footer-contacts {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.page-header, .page-footer { outline: 3px solid #ff0000; }
+.advantages-list, .recommendations-list, .hotels-list { outline: 3px solid #00cc00; }
+.advantages-item, .recommendations-item, .hotel-card { outline: 2px solid #0066ff; }
+
+/* ===== ФОНОВЫЕ ПАРАМЕТРЫ ===== */
+
+/* Hero главной: фото поверх синего */
+.hero {
+  color: #ffffff;
+  background-color: #83b3d3;
+  background-image: url("images/index/index-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Карточки преимуществ */
+.advantages-item {
+  background-color: #e5e5e5;
+}
+
+.advantages-item-full {
+  background-color: #83b3d3;
+  color: #ffffff;
+}
+
+.advantages-item-full .advantages-subtitle,
+.advantages-item-full .advantages-description {
+  color: #ffffff;
+}
+
+/* Карточки «Жильё / Еда / Сувениры» */
+.recommendations-item {
+  background-color: #83b3d3;
+  color: #333333;
+}
+
+/* «Заинтересовались?» */
+.offer {
+  background-color: #ffffff;
+}
+
+/* Подписка — поверх фото */
+.subscribe {
+  color: #ffffff;
+  background-image: url("images/index/subscribe-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Шапка каталога и фильтр — поверх фото с каньоном */
+.catalog-header,
+.catalog-filter {
+  color: #ffffff;
+  background-color: #83b3d3;
+  background-image: url("images/catalog/filter-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Сортировка, карточки гостиниц и подвал — на белом */
+.catalog-sorting,
+.hotel-card,
+.page-footer {
+  background-color: #ffffff;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  background-color: #83b3d3;
+  border: 0;
+}
+
+.user-nav-count {
+  background-color: #83b3d3;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+}
+
+/* ========== 1. Скрытые элементы ========== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ========== 2. Убираем буллеты у списков ========== */
+.main-nav-list,
+.user-nav-list,
+.advantages-list,
+.recommendations-list,
+.footer-social-list,
+.filter-list,
+.view-list,
+.hotels-list,
+.pagination-list,
+.breadcrumbs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== 3. Защита от переполнения ========== */
+.main-nav-list,
+.user-nav-list,
+.footer-social-list,
+.recommendations-list,
+.hotels-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ========== 4. Вертикальные отступы ========== */
+/* секции */
+.advantages,
+.recommendations,
+.offer,
+.subscribe,
+.catalog-filter,
+.catalog-sorting,
+.catalog-hotels,
+.catalog-pagination {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* заголовки секций */
+.advantages-title,
+.recommendations-title,
+.offer-title,
+.subscribe-title,
+.catalog-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* ссылки и span — вертикальные отступы работают только на блочных */
+.main-nav-link,
+.user-nav-link,
+.footer-social-link,
+.footer-phone,
+.breadcrumbs-link,
+.view-link {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.user-nav-count {
+  display: block;
+  margin-top: 5px;
+}
+
+/* ========== 5. Резервируем место под декор ========== */
+.user-nav-count {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.footer-social-link {
+  min-width: 24px;
+  min-height: 15px;
+}
+
+.hotel-card-stars {
+  min-height: 17px;
+}
+
+/* ========== 6. Выравнивание по вертикали ========== */
+.page-header,
+.main-nav,
+.footer-contacts,
+.catalog-sorting,
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.advantages-item,
+.recommendations-item,
+.subscribe,
+.hotel-card,
+.catalog-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.subscribe {
+  color: #ffffff;
+  background-color: #83b3d3;
+  background-image: url("images/index/index-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main-nav-list,
+.footer-social-list {
+  gap: 32px;
+}
+
+.advantages-description,
+.recommendations-description,
+.offer-text,
+.subscribe-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.recommendations-item {
+  background-color: rgba(131, 179, 211, 0.12);
+  color: #333333;
+}
+
+.recommendations-item:nth-child(2) {
+  background-color: #f2f2f2;
+}
