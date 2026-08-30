@@ -171,11 +171,11 @@ a {
 
 /* Карточки преимуществ */
 .advantages-item {
-  background-color: #e5e5e5;          /* светлый фон → тёмный текст наследуется с body */
+  background-color: #e5e5e5;
 }
 
 .advantages-item-full {
-  background-color: #83b3d3;          /* синий фон → белый текст */
+  background-color: #83b3d3;
   color: #ffffff;
 }
 
@@ -244,4 +244,156 @@ a {
 
 body {
   font-family: "PT Sans", sans-serif;
+}
+
+/* ========== 1. Скрытые элементы ========== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* ========== 2. Убираем буллеты у списков ========== */
+.main-nav-list,
+.user-nav-list,
+.advantages-list,
+.recommendations-list,
+.footer-social-list,
+.filter-list,
+.view-list,
+.hotels-list,
+.pagination-list,
+.breadcrumbs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== 3. Защита от переполнения ========== */
+.main-nav-list,
+.user-nav-list,
+.footer-social-list,
+.recommendations-list,
+.hotels-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* ========== 4. Вертикальные отступы ========== */
+/* секции */
+.advantages,
+.recommendations,
+.offer,
+.subscribe,
+.catalog-filter,
+.catalog-sorting,
+.catalog-hotels,
+.catalog-pagination {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* заголовки секций */
+.advantages-title,
+.recommendations-title,
+.offer-title,
+.subscribe-title,
+.catalog-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+/* ссылки и span — вертикальные отступы работают только на блочных */
+.main-nav-link,
+.user-nav-link,
+.footer-social-link,
+.footer-phone,
+.breadcrumbs-link,
+.view-link {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.user-nav-count {
+  display: block;
+  margin-top: 5px;
+}
+
+/* ========== 5. Резервируем место под декор ========== */
+.user-nav-count {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.footer-social-link {
+  min-width: 24px;
+  min-height: 15px;
+}
+
+.hotel-card-stars {
+  min-height: 17px;
+}
+
+/* ========== 6. Выравнивание по вертикали ========== */
+.page-header,
+.main-nav,
+.footer-contacts,
+.catalog-sorting,
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.advantages-item,
+.recommendations-item,
+.subscribe,
+.hotel-card,
+.catalog-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.subscribe {
+  color: #ffffff;
+  background-color: #83b3d3;
+  background-image: url("images/index/index-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main-nav-list,
+.footer-social-list {
+  gap: 32px;
+}
+
+.advantages-description,
+.recommendations-description,
+.offer-text,
+.subscribe-text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.recommendations-item {
+  background-color: rgba(131, 179, 211, 0.12);
+  color: #333333;
+}
+
+.recommendations-item:nth-child(2) {
+  background-color: #f2f2f2;
 }
