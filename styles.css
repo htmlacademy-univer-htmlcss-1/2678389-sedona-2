@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("fonts/ptsans-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("fonts/ptsans-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  background-color: #f2f2f2;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Шапка */
+.main-nav-link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.user-nav-count {
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Кнопки */
+.button {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* Главная страница */
+.advantages-title,
+.recommendations-title,
+.offer-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.advantages-subtitle,
+.recommendations-subtitle {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.advantages-text,
+.advantages-description,
+.recommendations-description,
+.offer-text {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+/* Подписка (на тёмном фоне — белый текст) */
+.subscribe-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.subscribe-text {
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+/* Каталог */
+.catalog-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.breadcrumbs-link,
+.breadcrumbs-current {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.filter-group-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.filter-label,
+.filter-price-text {
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.catalog-count {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.hotel-card-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.hotel-card-type,
+.hotel-card-price {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.hotel-card-rating {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+}
+
+/* Подвал */
+.footer-phone {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #333333;
+}
+
+/* ===== ФОНОВЫЕ ПАРАМЕТРЫ ===== */
+
+/* Hero главной: фото поверх синего */
+.hero {
+  color: #ffffff;
+  background-color: #83b3d3;
+  background-image: url("images/index/index-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Карточки преимуществ */
+.advantages-item {
+  background-color: #e5e5e5;          /* светлый фон → тёмный текст наследуется с body */
+}
+
+.advantages-item-full {
+  background-color: #83b3d3;          /* синий фон → белый текст */
+  color: #ffffff;
+}
+
+.advantages-item-full .advantages-subtitle,
+.advantages-item-full .advantages-description {
+  color: #ffffff;
+}
+
+/* Карточки «Жильё / Еда / Сувениры» */
+.recommendations-item {
+  background-color: #83b3d3;
+  color: #333333;
+}
+
+/* «Заинтересовались?» */
+.offer {
+  background-color: #ffffff;
+}
+
+/* Подписка — поверх фото */
+.subscribe {
+  color: #ffffff;
+  background-image: url("images/index/subscribe-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Шапка каталога и фильтр — поверх фото с каньоном */
+.catalog-header,
+.catalog-filter {
+  color: #ffffff;
+  background-color: #83b3d3;
+  background-image: url("images/catalog/filter-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Сортировка, карточки гостиниц и подвал — на белом */
+.catalog-sorting,
+.hotel-card,
+.page-footer {
+  background-color: #ffffff;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.button {
+  background-color: #83b3d3;
+  border: 0;
+}
+
+.user-nav-count {
+  background-color: #83b3d3;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+}
