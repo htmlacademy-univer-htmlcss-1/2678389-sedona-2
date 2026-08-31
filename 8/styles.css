@@ -1,0 +1,639 @@
+/*
+   1. ПОДКЛЮЧЕНИЕ ШРИФТОВ
+    */
+@font-face {
+  font-family: "PT Sans";
+  src: url("fonts/ptsans-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: url("fonts/ptsans-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*
+   2. БАЗОВЫЕ СБРОСЫ
+    */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+   3. СКРЫТЫЕ ЭЛЕМЕНТЫ
+    */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*
+   4. СПИСКИ БЕЗ БУЛЛЕТОВ
+    */
+.main-nav-list,
+.user-nav-list,
+.advantages-list,
+.recommendations-list,
+.footer-social-list,
+.filter-list,
+.view-list,
+.hotels-list,
+.pagination-list,
+.breadcrumbs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.recommendations {
+  text-align: center;
+}
+
+/*
+   5. БАЗОВЫЙ ТЕКСТ НА BODY
+    */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333333;
+  background-color: #f2f2f2;
+  min-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стики-футер */
+.page-main {
+  flex-grow: 1;
+}
+
+/*
+   6. ТЕКСТОВЫЕ СТИЛИ
+   = */
+/* Шапка */
+.main-nav-link {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+  display: block;
+  padding: 10px 0;
+}
+
+.user-nav-count {
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #83b3d3;
+  display: block;
+  min-width: 20px;
+  min-height: 20px;
+  padding: 4px;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Кнопки */
+.button {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #83b3d3;
+  border: 0;
+  padding: 8px 34px;
+  cursor: pointer;
+}
+
+/* Главная страница — заголовки секций */
+.advantages-title,
+.recommendations-title,
+.offer-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 25px;
+}
+
+.advantages-subtitle,
+.recommendations-subtitle {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #333333;
+  margin: 0 0 20px;
+}
+
+/* Текст описаний  */
+.advantages-description,
+.recommendations-description,
+.offer-text,
+.subscribe-text {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  margin: 0;
+}
+
+/* На синих карточках преимуществ текст — белый */
+.advantages-item-full .advantages-subtitle,
+.advantages-item-full .advantages-description {
+  color: #ffffff;
+}
+
+/* Подписка — на тёмном фоне */
+.subscribe-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 25px;
+}
+
+.subscribe-text {
+  color: #ffffff;
+}
+
+/* Каталог */
+.catalog-title {
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.breadcrumbs-link,
+.breadcrumbs-current {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  display: block;
+  padding: 10px 0;
+}
+
+.filter-group-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.filter-label,
+.filter-price-text {
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.catalog-count {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0;
+}
+
+.hotel-card-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 15px;
+}
+
+.hotel-card-type,
+.hotel-card-price {
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  margin: 0 0 10px;
+}
+
+.hotel-card-rating {
+  font-size: 16px;
+  line-height: 20px;
+  color: #333333;
+  margin: 15px 0 0;
+}
+
+.hotel-card-stars {
+  min-height: 17px;
+  margin: 0;
+}
+
+/* Подвал */
+.footer-phone {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #333333;
+  display: block;
+  padding: 10px 0;
+}
+
+/*
+   7. ФОНОВЫЕ ПАРАМЕТРЫ И ДЕКОРАТИВНЫЕ ИЗОБРАЖЕНИЯ
+    */
+/* Герой — фото гор на синем */
+.hero {
+  color: #ffffff;
+  background-color: #83b3d3;
+  background-image: url("images/index/index-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Карточки преимуществ */
+.advantages-item {
+  background-color: #e5e5e5;
+}
+
+.advantages-item-full {
+  background-color: #83b3d3;
+  color: #ffffff;
+}
+
+/* Карточки рекомендаций: боковые голубоватые, средняя в цвет фона */
+.recommendations-item {
+  background-color: rgba(131, 179, 211, 0.15);
+  color: #333333;
+}
+
+.recommendations-item:nth-child(2) {
+  background-color: #f2f2f2;
+}
+
+/* «Заинтересовались?» */
+.offer {
+  background-color: #ffffff;
+}
+
+/* Подписка — поверх фото */
+.subscribe {
+  color: #ffffff;
+  background-image: url("images/index/index-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Шапка каталога и фильтр */
+.catalog-header,
+.catalog-filter {
+  color: #ffffff;
+  background-color: #83b3d3;
+  background-image: url("images/catalog/filter-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Сортировка, карточки гостиниц и подвал — белые */
+.catalog-sorting,
+.hotel-card,
+.page-footer {
+  background-color: #ffffff;
+}
+
+/*
+   8. СЕТКА 1200px
+   */
+.hero,
+.advantages,
+.recommendations,
+.offer,
+.subscribe,
+.catalog-hotels {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header,
+.catalog-header,
+.catalog-filter,
+.catalog-sorting,
+.catalog-pagination {
+  width: 1060px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+.page-footer {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Вертикальные отступы секций */
+.advantages,
+.recommendations,
+.offer,
+.subscribe,
+.catalog-filter,
+.catalog-sorting,
+.catalog-hotels,
+.catalog-pagination {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/*
+   9. FLEX-РАСКЛАДКА ВНУТРИ БЛОКОВ
+    */
+.page-header {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+
+.main-nav-list,
+.user-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main-nav-list {
+  gap: 32px;
+}
+
+.user-nav-list {
+  gap: 20px;
+}
+
+/*
+   10. ГРИДЫ ДЛЯ КОМПОНЕНТОВ
+    */
+/* Преимущества*/
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.advantages-item-full {
+  grid-column: 1 / -1;
+}
+
+/* Рекомендации */
+.recommendations-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Гостиницы */
+.hotels-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Подписка*/
+.subscribe-form {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  gap: 10px;
+}
+
+/* Фильтр*/
+.filter-form {
+  display: grid;
+  grid-template-columns: min-content min-content 1fr min-content;
+  gap: 20px 40px;
+  align-items: start;
+}
+
+/* Подвал */
+.footer-contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 70px;
+}
+
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Герой */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0;
+}
+
+/* «Заинтересовались?»  */
+.offer,
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Шапка каталога */
+.catalog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Сортировка */
+.catalog-sorting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.view-list {
+  display: flex;
+  gap: 20px;
+}
+
+.pagination-list {
+  display: flex;
+  gap: 10px;
+}
+
+/*
+   11. OBJECT-FIT ДЛЯ ФОТО КАРТОЧЕК
+   */
+.hotel-card-link img {
+  width: 100%;
+  height: 212px;
+  object-fit: cover;
+}
+
+.advantages,
+.advantages-item,
+.recommendations-item {
+  text-align: center;
+}
+
+.advantages-item-full img {
+  width: 100%;
+  height: 385px;
+  object-fit: cover;
+}
+
+/* Зигзаг + фото */
+.hero {
+  background-image: url("images/index/divider.svg"),
+                    url("images/index/index-background.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom center, center;
+  background-size: 100% 57px, cover;
+}
+
+/* Иконки рекомендаций */
+.recommendations-item {
+  background-repeat: no-repeat;
+  background-position: center 50px;
+  padding-top: 150px;
+}
+
+.recommendations-item:nth-child(1) {
+  background-image: url("images/icons/icon-home.svg");
+  background-size: 75px 72px;
+}
+
+.recommendations-item:nth-child(2) {
+  background-image: url("images/icons/icon-food.svg");
+  background-size: 74px 70px;
+}
+
+.recommendations-item:nth-child(3) {
+  background-image: url("images/icons/icon-gift.svg");
+  background-size: 64px 76px;
+}
+
+/* Навигация */
+.main-nav-link:hover,
+.main-nav-link:focus-visible {
+  color: #83b3d3;
+}
+
+.main-nav-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопки */
+.button:hover {
+  background-color: #6891ac;
+}
+
+.button:active {
+  opacity: 0.6;
+}
+
+.button:focus-visible {
+  outline: 3px solid #83b3d3;
+  outline-offset: 3px;
+}
+
+.button:disabled {
+  background-color: #e5e5e5;
+  color: rgba(51, 51, 51, 0.3);
+  cursor: not-allowed;
+}
+
+/* Поля форм */
+.subscribe-input {
+  border: 2px solid #ffffff;
+  background-color: #f2f2f2;
+}
+
+.subscribe-input:hover {
+  border-color: #83b3d3;
+}
+
+.subscribe-input:focus {
+  border-color: #83b3d3;
+  outline: none;
+}
+
+.subscribe-input:user-invalid {
+  border-color: #ff5a5a;
+}
+
+/* Соцсети и иконки в шапке */
+.footer-social-link:hover,
+.user-nav-link:hover {
+  opacity: 0.7;
+}
+
+.footer-social-link:active,
+.user-nav-link:active {
+  opacity: 0.5;
+}
+
+/* --- Соцсети --- */
+
+.footer-social-link:hover img {
+  filter: brightness(0.8);
+}
+
+.footer-social-link:active img {
+  opacity: 0.3;
+}
+
+/* --- Телефон --- */
+.footer-phone:hover {
+  color: #756157;
+}
+
+.footer-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+/* --- Логотип Академии --- */
+.footer-academy-link:active img {
+  opacity: 0.3;
+}
