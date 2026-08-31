@@ -522,3 +522,118 @@ body {
   height: 385px;
   object-fit: cover;
 }
+
+/* Зигзаг + фото */
+.hero {
+  background-image: url("images/index/divider.svg"),
+                    url("images/index/index-background.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom center, center;
+  background-size: 100% 57px, cover;
+}
+
+/* Иконки рекомендаций */
+.recommendations-item {
+  background-repeat: no-repeat;
+  background-position: center 50px;
+  padding-top: 150px;
+}
+
+.recommendations-item:nth-child(1) {
+  background-image: url("images/icons/icon-home.svg");
+  background-size: 75px 72px;
+}
+
+.recommendations-item:nth-child(2) {
+  background-image: url("images/icons/icon-food.svg");
+  background-size: 74px 70px;
+}
+
+.recommendations-item:nth-child(3) {
+  background-image: url("images/icons/icon-gift.svg");
+  background-size: 64px 76px;
+}
+
+/* Навигация */
+.main-nav-link:hover,
+.main-nav-link:focus-visible {
+  color: #83b3d3;
+}
+
+.main-nav-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопки */
+.button:hover {
+  background-color: #6891ac;
+}
+
+.button:active {
+  opacity: 0.6;
+}
+
+.button:focus-visible {
+  outline: 3px solid #83b3d3;
+  outline-offset: 3px;
+}
+
+.button:disabled {
+  background-color: #e5e5e5;
+  color: rgba(51, 51, 51, 0.3);
+  cursor: not-allowed;
+}
+
+/* Поля форм */
+.subscribe-input {
+  border: 2px solid #ffffff;
+  background-color: #f2f2f2;
+}
+
+.subscribe-input:hover {
+  border-color: #83b3d3;
+}
+
+.subscribe-input:focus {
+  border-color: #83b3d3;
+  outline: none;
+}
+
+.subscribe-input:user-invalid {
+  border-color: #ff5a5a;
+}
+
+/* Соцсети и иконки в шапке */
+.footer-social-link:hover,
+.user-nav-link:hover {
+  opacity: 0.7;
+}
+
+.footer-social-link:active,
+.user-nav-link:active {
+  opacity: 0.5;
+}
+
+/* --- Соцсети --- */
+
+.footer-social-link:hover img {
+  filter: brightness(0.8);
+}
+
+.footer-social-link:active img {
+  opacity: 0.3;
+}
+
+/* --- Телефон --- */
+.footer-phone:hover {
+  color: #756157;
+}
+
+.footer-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+/* --- Логотип Академии --- */
+.footer-academy-link:active img {
+  opacity: 0.3;
+}
