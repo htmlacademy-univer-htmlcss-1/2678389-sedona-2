@@ -2,13 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>HTML Academy: Седона — Гостиницы</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+
     <header class="page-header">
       <a class="header-logo" href="index.html">
-        <img src="images/sedona logo.svg" width="140" height="70" alt="Логотип города Седона.">
+        <img src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
@@ -35,7 +36,7 @@
             </a>
           </li>
           <li class="user-nav-item">
-            <button class="button" type="button">Хочу сюда!</button>
+            <button class="button button-redirect" type="button">Хочу сюда!</button>
           </li>
         </ul>
       </nav>
@@ -65,46 +66,54 @@
               <li class="filter-item">
                 <label class="filter-label">
                   <input class="filter-input" type="checkbox" name="pool" checked>
+                  <span class="control-mark"></span>
                   Бассейн
                 </label>
               </li>
               <li class="filter-item">
                 <label class="filter-label">
                   <input class="filter-input" type="checkbox" name="parking" checked>
+                  <span class="control-mark"></span>
                   Парковка
                 </label>
               </li>
               <li class="filter-item">
                 <label class="filter-label">
                   <input class="filter-input" type="checkbox" name="wi-fi">
+                  <span class="control-mark"></span>
                   Wi-Fi
                 </label>
               </li>
             </ul>
           </fieldset>
+
           <fieldset class="filter-group">
             <legend class="filter-group-title">Тип жилья:</legend>
             <ul class="filter-list">
               <li class="filter-item">
                 <label class="filter-label">
                   <input class="filter-input" type="radio" name="type" value="hotel" checked>
+                  <span class="control-mark"></span>
                   Гостиница
                 </label>
               </li>
               <li class="filter-item">
                 <label class="filter-label">
                   <input class="filter-input" type="radio" name="type" value="motel">
+                  <span class="control-mark"></span>
                   Мотель
                 </label>
               </li>
               <li class="filter-item">
                 <label class="filter-label">
                   <input class="filter-input" type="radio" name="type" value="apartments">
+                  <span class="control-mark"></span>
                   Апартаменты
                 </label>
               </li>
             </ul>
           </fieldset>
+
           <fieldset class="filter-group">
             <legend class="filter-group-title">Стоимость, ₽:</legend>
             <div class="filter-price">
@@ -117,7 +126,15 @@
                 <input class="filter-price-input" type="number" name="max-price" value="9000" placeholder="9000">
               </label>
             </div>
+            <div class="range">
+              <div class="range-track">
+                <div class="range-fill"></div>
+              </div>
+              <button class="range-handle range-handle-min" type="button" aria-label="Минимальная цена"></button>
+              <button class="range-handle range-handle-max" type="button" aria-label="Максимальная цена"></button>
+            </div>
           </fieldset>
+
           <div class="filter-buttons">
             <button class="button" type="submit">Применить</button>
             <button class="button" type="reset">Сбросить</button>
@@ -129,7 +146,7 @@
         <h2 class="visually-hidden">Сортировка и вид карточек</h2>
         <p class="catalog-count">Найдено гостиниц: 38</p>
         <select class="catalog-select" aria-label="Сортировка">
-          <option value="popular">Сначала популярные</option>
+          <option value="popular" selected>Сначала популярные</option>
           <option value="cheap">Сначала дешёвые</option>
           <option value="expensive">Сначала дорогие</option>
         </select>
@@ -275,5 +292,67 @@
         </a>
       </div>
     </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal">
+      <div class="modal-container">
+        <button class="modal-close" type="button" aria-label="Закрыть">Закрыть</button>
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="modal-field">
+            <label class="modal-label" for="date-start">Дата заезда:</label>
+            <span class="popover">
+              <button class="popover-toggle" type="button" aria-label="Подробнее о дате заезда"></button>
+              <span class="popover-content" role="tooltip">Дата заезда — не раньше сегодняшнего дня</span>
+            </span>
+            <input class="modal-input modal-input-date" id="date-start" type="text" name="date-start" placeholder="1 сентября 2026" required>
+          </div>
+          <div class="modal-field">
+            <label class="modal-label" for="date-end">Дата выезда:</label>
+            <input class="modal-input modal-input-date" id="date-end" type="text" name="date-end" placeholder="10 сентября 2026" required>
+          </div>
+          <div class="modal-counter">
+            <span class="modal-label">Взрослые:</span>
+            <button class="counter-button counter-minus" type="button" aria-label="Меньше"></button>
+            <input class="counter-input" type="number" name="adults" value="2">
+            <button class="counter-button counter-plus" type="button" aria-label="Больше"></button>
+          </div>
+          <div class="modal-counter">
+            <span class="modal-label">Дети:</span>
+            <button class="counter-button counter-minus" type="button" aria-label="Меньше"></button>
+            <input class="counter-input" type="number" name="children" value="0">
+            <button class="counter-button counter-plus" type="button" aria-label="Больше"></button>
+          </div>
+          <button class="button modal-submit" type="submit">Найти</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.querySelector('.modal');
+      const closeButton = modal.querySelector('.modal-close');
+
+      document.querySelectorAll('.button-redirect').forEach((button) => {
+        button.addEventListener('click', () => {
+          modal.classList.add('modal-open');
+        });
+      });
+
+      closeButton.addEventListener('click', () => {
+        modal.classList.remove('modal-open');
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('modal-open')) {
+          modal.classList.remove('modal-open');
+        }
+      });
+
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.classList.remove('modal-open');
+        }
+      });
+    </script>
   </body>
 </html>
