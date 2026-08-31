@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles.css">
+    <base href="https://htmlacademy-univer-htmlcss-1.github.io/2678389-sedona-2/10/">
+</head>
+  <body>
+
+    <header class="page-header">
+      <a class="header-logo" href="index.html">
+        <img src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a class="main-nav-link main-nav-link-current" href="index.html">Главная</a>
+          </li>
+          <li class="main-nav-item">
+            <a class="main-nav-link" href="#">О Седоне</a>
+          </li>
+          <li class="main-nav-item">
+            <a class="main-nav-link" href="catalog.html">Гостиницы</a>
+          </li>
+        </ul>
+        <ul class="main-nav-list user-nav-list">
+          <li class="user-nav-item">
+            <a class="user-nav-link" href="#">
+              <img src="images/icons/icon-search.svg" width="20" height="20" alt="Поиск.">
+            </a>
+          </li>
+          <li class="user-nav-item">
+            <a class="user-nav-link" href="#">
+              <img src="images/icons/icon-heart.svg" width="20" height="20" alt="Избранное.">
+              <span class="user-nav-count">12</span>
+            </a>
+          </li>
+          <li class="user-nav-item">
+            <button class="button button-redirect" type="button">Хочу сюда!</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <h1 class="visually-hidden">Неофициальный сайт города Седона</h1>
+
+      <section class="hero">
+        <img src="images/index/welcome.svg" width="458" height="352"
+             alt="Добро пожаловать в прекрасную Седону, ибо Гранд-Каньон отстой.">
+      </section>
+
+      <section class="advantages">
+        <h2 class="advantages-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <p class="advantages-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
+        <ul class="advantages-list">
+          <li class="advantages-item advantages-item-full">
+            <h3 class="advantages-subtitle">Настоящий городок</h3>
+            <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <img src="images/index/photo-1.jpg" width="800" height="385" alt="Вид на городок Седона.">
+          </li>
+          <li class="advantages-item">
+            <h3 class="advantages-subtitle">Небольшая площадь</h3>
+            <p class="advantages-description">Все достопримечательности находятся очень близко</p>
+          </li>
+          <li class="advantages-item">
+            <h3 class="advantages-subtitle">Красивая<br>дорога</h3>
+            <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+          </li>
+          <li class="advantages-item">
+            <h3 class="advantages-subtitle">Мало<br>туристов</h3>
+            <p class="advantages-description">Большинство едет в Гранд-Каньон и толпится там</p>
+          </li>
+          <li class="advantages-item advantages-item-full">
+            <h3 class="advantages-subtitle">Там есть мост дьявола</h3>
+            <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+            <img src="images/index/photo-2.jpg" width="800" height="385" alt="Скала Мост Дьявола.">
+          </li>
+        </ul>
+      </section>
+
+      <section class="recommendations">
+        <h2 class="recommendations-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+        <p class="recommendations-text">Опытный персонал и качественное обслуживание!</p>
+        <ul class="recommendations-list">
+          <li class="recommendations-item">
+            <h3 class="recommendations-subtitle">Жильё</h3>
+            <p class="recommendations-description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          </li>
+          <li class="recommendations-item">
+            <h3 class="recommendations-subtitle">Еда</h3>
+            <p class="recommendations-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
+          </li>
+          <li class="recommendations-item">
+            <h3 class="recommendations-subtitle">Сувениры</h3>
+            <p class="recommendations-description">Не только китайского, но и настоящего местного производства!</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="offer">
+        <h2 class="offer-title">Заинтересовались?</h2>
+        <p class="offer-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <button class="button button-redirect" type="button">Поиск гостиницы в Седоне</button>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <section class="subscribe">
+        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+        <p class="subscribe-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label class="visually-hidden" for="subscribe-email">Ваш e-mail</label>
+          <input class="subscribe-input" type="email" id="subscribe-email" name="email" placeholder="Ваш e-mail" required>
+          <button class="button" type="submit">Подписаться</button>
+        </form>
+      </section>
+      <div class="footer-contacts">
+        <ul class="footer-social-list">
+          <li class="footer-social-item">
+            <a class="footer-social-link" href="https://vk.com/htmlacademy">
+              <img src="images/icons/icon-vk.svg" width="24" height="15" alt="ВКонтакте.">
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-link" href="https://t.me/htmlacademy">
+              <img src="images/icons/icon-telegram.svg" width="18" height="16" alt="Телеграм.">
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-link" href="https://www.youtube.com/user/htmlacademyru">
+              <img src="images/icons/icon-youtube.svg" width="22" height="17" alt="Ютуб.">
+            </a>
+          </li>
+        </ul>
+        <a class="footer-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+        <a class="footer-academy-link" href="https://htmlacademy.ru/">
+          <img src="images/html-academy.svg" width="115" height="34" alt="Логотип HTML Academy.">
+        </a>
+      </div>
+    </footer>
+
+    <!-- Модальное окно -->
+    <div class="modal">
+      <div class="modal-container">
+        <button class="modal-close" type="button" aria-label="Закрыть">Закрыть</button>
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="modal-field">
+            <label class="modal-label" for="date-start">Дата заезда:</label>
+            <span class="popover">
+              <button class="popover-toggle" type="button" aria-label="Подробнее о дате заезда"></button>
+              <span class="popover-content" role="tooltip">Дата заезда — не раньше сегодняшнего дня</span>
+            </span>
+            <input class="modal-input modal-input-date" id="date-start" type="text" name="date-start" placeholder="1 сентября 2026" required>
+          </div>
+          <div class="modal-field">
+            <label class="modal-label" for="date-end">Дата выезда:</label>
+            <input class="modal-input modal-input-date" id="date-end" type="text" name="date-end" placeholder="10 сентября 2026" required>
+          </div>
+          <div class="modal-counter">
+            <span class="modal-label">Взрослые:</span>
+            <button class="counter-button counter-minus" type="button" aria-label="Меньше"></button>
+            <input class="counter-input" type="number" name="adults" value="2">
+            <button class="counter-button counter-plus" type="button" aria-label="Больше"></button>
+          </div>
+          <div class="modal-counter">
+            <span class="modal-label">Дети:</span>
+            <button class="counter-button counter-minus" type="button" aria-label="Меньше"></button>
+            <input class="counter-input" type="number" name="children" value="0">
+            <button class="counter-button counter-plus" type="button" aria-label="Больше"></button>
+          </div>
+          <button class="button modal-submit" type="submit">Найти</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.querySelector('.modal');
+      const closeButton = modal.querySelector('.modal-close');
+
+      document.querySelectorAll('.button-redirect').forEach((button) => {
+        button.addEventListener('click', () => {
+          modal.classList.add('modal-open');
+        });
+      });
+
+      closeButton.addEventListener('click', () => {
+        modal.classList.remove('modal-open');
+      });
+
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.classList.contains('modal-open')) {
+          modal.classList.remove('modal-open');
+        }
+      });
+
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.classList.remove('modal-open');
+        }
+      });
+    </script>
+  </body>
+</html>
